@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Banking System</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- bootstrap links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- stylesheet link -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/827b393380.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Navigation Bar-->
+
+  <section id="home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top navigation-bar">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <h2><i class="fa fa-university icon-padding" aria-hidden="true"></i>The People's Bank</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto right-align">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#transfer">Transfer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </section>
+
+
+    <!-- Title / Home -->
+
+    <section id="home">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Most Reliable Bank in the world.</h1>
+        </div>
+
+        <div class="col-lg-6">
+          <img class="bank-image" src="{{ url_for('static', filename='images/bankimage.jpg') }}" alt="bank-image">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- testimonial section -->
+
+    <section id="testimonial">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">I trust this bank.</h2>
+          <img class="testimonial-img" src="{{ url_for('static', filename='images/nye.png') }}" alt="nye">
+          <em> - New York Times</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">Good Service!</h2>
+          <img class="testimonial-img" src="{{ url_for('static', filename='images/world-bank.jpg') }}" alt="world-bank">
+          <em> - World Bank</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon carousel-icon-color"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon carousel-icon-color"></span>
+      </a>
+    </div>
+  </section>
+
+    <!-- transfer section -->
+
+    <section id="transfer">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Transfer now</h2>
+        </div>
+
+        <div class="col-lg-6">
+          <a href="/transfer"><button type="button" class="btn transfer-btn">Transfer</button></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- contact section -->
+
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <p><i class="fa fa-envelope contact-icon" aria-hidden="true"></i>bank@email.com<i class="fa fa-mobile contact-icon" aria-hidden="true"></i>923094778</p>
+    </section>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}" charset="utf-8"></script>
+</body>
+
+</html>
